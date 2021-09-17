@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6</title>
+</head>
+<body>
+    <h2>Handling User Input & Using Modifiers</h2>
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+          </div>
+          <div id="app-6">
+            <p>{{ name }}</p>
+            <input v-model="name">
+            <p>{{ email }}</p>
+            <input v-model="email">
+            <p>{{ age }}</p>
+            <input v-model.number="age" type="number">
+          </div>
+          <h2>Checkbox</h2>
+          <div id="v-model-multiple-checkboxes" class="demo">
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+            <label for="mike">Mike</label>
+            <br />
+            <span>Checked names: {{ checkedNames }}</span>
+          </div>
+          <div id="app">
+            <h2>Using v-for</h2>
+            <list-component v-for="item in itemsList" v-bind:data=item></list-component>
+            <button onclick="addItem()">Add item</button>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
